@@ -1,87 +1,127 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>מדיניות פרטיות – Smart Garden API</title>
+  <title>Privacy Policy – Smart Garden API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;max-width:800px;margin:auto;padding:24px;}
-    h1,h2{color:#2e7d32;}
-    table{border-collapse:collapse;width:100%;}
-    th,td{border:1px solid #ddd;padding:8px;}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;max-width:900px;margin:0 auto;padding:24px;}
+    h1,h2{color:#2e7d32;margin-top:1.2em;}
+    table{border-collapse:collapse;width:100%;margin:12px 0;}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left;vertical-align:top;}
+    th{background:#f2f2f2;}
+    code{background:#f9f9f9;padding:2px 4px;border-radius:3px;}
+    ul{margin-left:20px;}
   </style>
 </head>
 <body>
-<h1>מדיניות פרטיות – Smart Garden API</h1>
-<p>עודכנה לאחרונה: 8 ביולי 2025</p>
-<!-- ← מדיניות פרטיות – Smart Garden API
-עודכנה לאחרונה: ‎8 ביולי 2025
-(מסמך זה נוסח בלשון זכר ↔ נקבה לשם הנוחות, אך מיועד לכולם.)
 
-1. מי אנחנו
-   Smart Garden API‏ (“ה-שירות”, “אנחנו”) מספק ממשק REST המאפשר:
+<h1>Privacy Policy – Smart Garden API</h1>
+<p><strong>Last updated:</strong> July&nbsp;8, 2025</p>
+<p>(This document uses masculine and feminine pronouns interchangeably for convenience but is intended for all users.)</p>
 
-* תחזית מזג-אוויר לכתובת GPS של הגינה
-* לוח שתילה חודשי לפי אזור אקלימי
-* אבחון-תמונה של בעיות בצמחים
+<h2>1. Who We Are</h2>
+<p>Smart Garden API (“the Service,” “we”) provides a REST interface that enables:</p>
+<ul>
+  <li>Weather forecasting for the GPS location of a garden</li>
+  <li>Monthly planting calendar based on climate zone</li>
+  <li>Image-based plant issue diagnosis</li>
+</ul>
 
-2. אילו נתונים אנו אוספים
-   \| קטגוריה           | דוגמאות                            | סיבת עיבוד                        |
-   \|-------------------|------------------------------------|-----------------------------------|
-   \| נתוני מיקום       | קווי רוחב/אורך (lat, lon)         | יצירת תחזית מזג-אוויר ממוקדת     |
-   \| נתוני אזור אקלימי | Zone “9a”, “‎13b-IL”, וכו’        | יצירת לוח שתילה רלוונטי         |
-   \| קובצי תמונה       | תמונת עלים/פרח שהועלתה ל-/diagnose | ניתוח מחלות/מזיקים              |
-   \| מטא-דאטה טכנית    | כתובת-IP, סוג לקוח API, תאריך וזמן קריאה | ניטור לוגים, אבטחה והקצאת משאבים |
+<h2>2. What Data We Collect</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th><th>Examples</th><th>Purpose of Processing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Location Data</td><td>Latitude/Longitude (lat, lon)</td><td>Generating localized weather forecasts</td>
+    </tr>
+    <tr>
+      <td>Climate Zone Data</td><td>Zone “9a”, “13b-IL”, etc.</td><td>Creating relevant planting calendars</td>
+    </tr>
+    <tr>
+      <td>Image Files</td><td>Uploaded leaf/flower photo to <code>/diagnose</code></td><td>Disease/pest analysis</td>
+    </tr>
+    <tr>
+      <td>Technical Metadata</td><td>IP address, API client type, timestamp</td><td>Log monitoring, security, resource allocation</td>
+    </tr>
+  </tbody>
+</table>
 
-איננו מבקשים או שומרים שם, אימייל או פרטי תשלום במסגרת הקריאות המתוארות לעיל, אלא אם שולבו מודולי OAuth חיצוניים מצד המפעיל.
+<p>We do not request or store names, emails, or payment details during the described API calls unless third-party OAuth modules are integrated by the operator.</p>
 
-3. שימוש במידע
-   הנתונים משמשים אך ורק בשביל:
+<h2>3. Use of Information</h2>
+<p>The collected data is used solely for:</p>
+<ul>
+  <li>Responding to your API request – e.g., generating an accurate weather forecast</li>
+  <li>Improving algorithm performance (anonymous statistics, such as diagnosis accuracy)</li>
+  <li>Protecting against misuse (rate-limiting, attack detection)</li>
+</ul>
 
-* מענה לשאילתת API שביצעת – למשל חיזוי מזג-אוויר מדויק.
-* שיפור ביצועי האלגוריתם (סטטיסטיקה אנונימית, למשל דיוק האבחון).
-* הגנה מפני שימוש לרעה (Rate-Limiting, זיהוי מתקפות).
+<h2>4. Sharing and Disclosure with Third Parties</h2>
+<ul>
+  <li>No sale, rental, or publication of personally identifiable data</li>
+  <li>Sub-processors (e.g., AWS S3, weather provider) receive only the minimum required to perform their service under data processing agreements</li>
+  <li>Legal requirements – data will only be disclosed under a valid court order</li>
+</ul>
 
-4. שיתוף וגילוי לצד שלישי
+<h2>5. Data Retention and Deletion</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Data Type</th><th>Maximum Retention Period</th><th>Deletion Mechanism</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Log Data (IP, timestamp)</td><td>30 days</td><td>Scheduled automatic deletion</td>
+    </tr>
+    <tr>
+      <td>Image Files</td><td>24 hours</td><td>Encrypted at rest; manually deleted after diagnosis</td>
+    </tr>
+    <tr>
+      <td>Forecast/Planting Data</td><td>14 days (in encrypted cache)</td><td>Expiration (TTL-based)</td>
+    </tr>
+  </tbody>
+</table>
 
-* ללא מכירה, השכרה או פרסום נתונים מזהים.
-* ספקי-משנה (AWS S3, ספק חזאי) מקבלים רק את המינימום הדרוש לביצוע השירות, בכפוף להסכמי עיבוד מידע.
-* דרישות חוקיות – נמסור נתונים רק אם נדרש בצו בית-משפט מחייב.
+<p>API clients may send a <code>DELETE /user-data</code> request (if enabled) for immediate deletion of all identifiable stored items.</p>
 
-5. שמירה ומחיקה
-   \| סוג נתון             | פרק זמן מקסימלי     | מנגנון מחיקה                           |
-   \|---------------------|---------------------|----------------------------------------|
-   \| נתוני-לוג (IP, תאריך) | ‎30 יום              | מחיקה אוטומטית מתוזמנת               |
-   \| קבצי-תמונה           | ‎24 שעות             | הצפנה ב-REST; מחיקה יזומה לאחר סיום האבחון |
-   \| נתוני תחזית/לוח שתילה| ‎14 יום במטמון מוצפן | התיישנות (TTL)                        |
+<h2>6. Security Measures</h2>
+<ul>
+  <li>HTTPS-only traffic</li>
+  <li>AES-256 encryption for files at rest</li>
+  <li>Key management via AWS KMS / Google Cloud KMS</li>
+  <li>Least-privilege access control</li>
+  <li>Quarterly code reviews and penetration testing</li>
+</ul>
 
-לקוח API רשאי לשלוח קריאת DELETE /user-data (אם מאופשר) לשם מחיקה מידית של כל הפריטים הניתנים לזיהוי שנשמרו.
+<h2>7. User Rights (GDPR/CCPA)</h2>
+<p>You are entitled to:</p>
+<ul>
+  <li><strong>Access</strong> – receive a copy of the stored data (if applicable to your API key)</li>
+  <li><strong>Correction</strong> – request correction of errors</li>
+  <li><strong>Erasure/Right to be Forgotten</strong> – as outlined in Section&nbsp;5</li>
+  <li><strong>Opt-out</strong> – object to processing for analytical/statistical purposes</li>
+</ul>
+<p>For requests, see contact details in the section below.</p>
 
-6. אבטחה
+<h2>8. Contact Information</h2>
+<p>
+  Smart Garden API – DPO<br>
+  Email: <a href="mailto:privacy@smartgarden.io">privacy@smartgarden.io</a><br>
+  Mail: 13 HaHaruv St., P.O. Box 456, Haifa 33045, Israel
+</p>
 
-* תעבורת HTTPS בלבד
-* הצפנת AES-256 עבור קבצים במנוחה
-* ניהול מפתחות ב-AWS KMS/Google Cloud KMS
-* בקרת גישה לפי Least-Privilege
-* ביקורות קוד ומבחני חדירות רבעוניים
+<h2>9. Changes to This Policy</h2>
+<p>
+  We will update this document upon adding new features or regulatory changes.
+  The updated date will appear at the top of this page.
+  Continued use after changes implies agreement to the updated policy.
+</p>
 
-7. זכויות משתמש (GDPR/CCPA)
-   הנך זכאי/ת ל-:
-
-* גישה – לקבל העתק של המידע השמור (אם רלוונטי למזהה API שלך)
-* תיקון – לבקש תיקון שגיאות
-* מחיקה/שכחה – כמפורט בסעיף 5
-* התנגדות לעיבוד למטרות אנליטיות (Opt-out)
-
-לבקשות – ראו פרטי קשר בסעיף הבא.
-
-8. יצירת קשר
-   Smart Garden API – DPO
-   אימייל: [privacy@smartgarden.io](mailto:privacy@smartgarden.io)
-   דואר: ‎החרוב 13, ת״ד 456, חיפה ‎33045, ישראל
-
-9. שינויים במדיניות
-   נעדכן מסמך זה בעת הוספת תכונות או שינוי בתקנות. תאריך העדכון יוצג בראש העמוד. המשך שימושך לאחר שינוי = הסכמה למדיניות המעודכנת.
- → -->
 </body>
 </html>
-Add privacy policy
